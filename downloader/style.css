@@ -21,7 +21,7 @@ main {
 }
 
 .card {
-  height: 30vh;
+  /* height: 30vh; */
   width: 50%;
   background-color: #fff;
   color: black;
@@ -47,7 +47,7 @@ main {
     height: 100%;
     background-color: rgb(64, 199, 64);
     border-radius: 5px;
-    width: 10%;
+    width: 0%;
 }
 
 .bottom {
@@ -80,4 +80,12 @@ main {
 
 .bottom button:active{
     scale: .95;
+}
+
+.para{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(19, 184, 19);
 }
