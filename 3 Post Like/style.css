@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(40, 38, 38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 60vh;
+  width: 25vw;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.chaiwala {
+  height: 50vh;
+  border-radius: 10px;
+}
+
+.like {
+  height: 15vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.name {
+  margin-top: 10px;
+  font-size: 22px;
+  font-family: monospace;
+  font-weight: 700;
+}
