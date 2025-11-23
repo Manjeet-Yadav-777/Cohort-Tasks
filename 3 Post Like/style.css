@@ -30,7 +30,11 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.img {
   position: relative;
+  overflow: hidden;
 }
 
 .chaiwala {
@@ -41,9 +45,11 @@ main {
 .like {
   height: 15vh;
   position: absolute;
-  top: 50%;
+  top: 110%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0) rotate(-90deg);
+  transition: all ease .3s;
+  opacity: 0;
 }
 
 .name {
