@@ -14,6 +14,9 @@ body {
 main {
   min-height: 100vh;
   width: 100vw;
+}
+
+.parent {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -39,25 +42,25 @@ main {
   border-top-right-radius: 10px;
 }
 
-.name{
-    text-align: center;
-    font-size: 22px;
-    margin-top: 10px;
-    font-weight: 800;
+.name {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: 800;
 }
 
-.btn{
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: rgb(28, 28, 28);
-    color: white;
-    cursor: pointer;
+.btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(28, 28, 28);
+  color: white;
+  cursor: pointer;
 }
 
-.btn:hover{
-    background-color: black;
+.btn:hover {
+  background-color: black;
 }
 
-.btn:active{
-    scale: .95;
+.btn:active {
+  scale: 0.95;
 }
