@@ -3,7 +3,6 @@ function sumArr(arr) {
     return (acc += item);
   }, 0);
 
-
   return sum;
 }
 
