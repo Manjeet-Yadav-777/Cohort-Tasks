@@ -123,9 +123,9 @@ const reels = [
 
 let allReels = document.querySelector(".all-reels");
 
-let sum = ``;
-
 function showData() {
+  let sum = ``;
+
   reels.forEach((item, idx) => {
     sum =
       sum +
@@ -135,24 +135,24 @@ function showData() {
                     } autoplay muted loop height="100%" width="100%"></video>
 
                     <div class="left">
-                        <div class="like left-div">
-                            <span>${
+                        <div class="like left-div" id=${idx}>
+                            <h4>${
                               item.isLiked
                                 ? `<i class="ri-heart-3-fill liked"></i>`
                                 : `<i class="ri-heart-3-line"></i>`
-                            }</span>
-                            <p>${item.likeCount}</p>
+                            }</h4>
+                            <h6>${item.likeCount}</h6>
                         </div>
                         <div class="comment left-div">
-                            <span><i class="ri-chat-3-line"></i></span>
-                            <p>${item.commentCount}</p>
+                            <h4><i class="ri-chat-3-line"></i></h4>
+                            <h6>${item.commentCount}</h6>
                         </div>
                         <div class="share left-div">
-                            <span><i class="ri-share-forward-line"></i></span>
-                            <p>${item.shareCount}</p>
+                            <h4><i class="ri-share-forward-line"></i></h4>
+                            <h6>${item.shareCount}</h6>
                         </div>
                         <div class="more left-div">
-                            <span><i class="ri-more-line"></i></span>
+                            <h4><i class="ri-more-line"></i></h4>
                         </div>
                     </div>
 
@@ -163,9 +163,9 @@ function showData() {
 
                             <h2>${item.username}</h2>
 
-                            <button>${
-                              item.isFollowed ? "Unfollow" : "Follow"
-                            }</button>
+                            <button class="fu" id=${idx}>${
+        item.isFollowed ? "Unfollow" : "Follow"
+      }</button>
                         </div>
                         <p>${item.caption}</p>
                     </div>
@@ -178,3 +178,23 @@ function showData() {
 
 showData();
 
+allReels.addEventListener("click", (dets) => {
+  if (dets.target.className == "like left-div") {
+    if (reels[dets.target.id].isLiked) {
+      reels[dets.target.id].likeCount--;
+      reels[dets.target.id].isLiked = false;
+    } else {
+      reels[dets.target.id].likeCount++;
+      reels[dets.target.id].isLiked = true;
+    }
+  }
+
+  if (dets.target.className == "fu") {
+    if (reels[dets.target.id].isFollowed) {
+      reels[dets.target.id].isFollowed = false;
+    } else {
+      reels[dets.target.id].isFollowed = true;
+    }
+  }
+  showData();
+});

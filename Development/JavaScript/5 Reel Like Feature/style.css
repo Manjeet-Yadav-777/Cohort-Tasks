@@ -128,3 +128,11 @@ main{
 .liked{
     color: red;
 }
+
+.left > div h4{
+    pointer-events: none;
+}
+
+.left > div h6{
+    pointer-events: none;
+}
